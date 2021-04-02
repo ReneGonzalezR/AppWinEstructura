@@ -45,16 +45,19 @@ namespace AppWinEstructura
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            Libro2 libro2 = new Libro2();
-
             string sMensaje = string.Empty;
             libro.titulo = txtTitulo.Text;
             libro.autor = txtAutor.Text;
             libro.precio = txtPrecio.Text;
             sMensaje = string.Format("Titulo: {0} \r\nAutor: {1} \r\nPrecio: {2}", libro.titulo, libro.autor, libro.precio);
-            MessageBox.Show(sMensaje, "Datos del Libro Publico");
+            MessageBox.Show(sMensaje, "Datos del Libro Publico");         
+        }
 
-            libro2.titulo= txtTitulo.Text;
+        private void btnImprimirPrivate_Click(object sender, EventArgs e)
+        {
+            string sMensaje = string.Empty;
+            Libro2 libro2 = new Libro2();
+            libro2.titulo = txtTitulo.Text;
             libro2.autor = txtAutor.Text;
             libro2.precio = txtPrecio.Text;
             sMensaje = string.Format("Titulo: {0} \r\nAutor: {1} \r\nPrecio: {2}", libro2.titulo, libro2.autor, libro2.precio);
